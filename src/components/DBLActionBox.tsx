@@ -1,5 +1,4 @@
 import React from 'react';
-import { MeetingBox } from './components';
 
 const DBLActionBox: React.FC = () => {
     return (

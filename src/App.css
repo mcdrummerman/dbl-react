@@ -1,22 +1,32 @@
-.App {
-  text-align: center;
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.jumbotron {
+  background-image: url(https://s3-us-west-2.amazonaws.com/denverbicyclelobby.com/img/stop+killing+us.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-.App-link {
-  color: #09d3ac;
+.swag-image {
+  width: 120px;
+}
+
+.swag-media {
+  margin-bottom: 16px;
+}
+
+#cycling-the-seasons{
+  max-width: 300px;
 }

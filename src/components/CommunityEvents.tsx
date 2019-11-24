@@ -1,4 +1,5 @@
 import React from 'react';
+import EventRow from './EventRow';
 
 const CommunityEvents: React.FC = () => {
     return (
@@ -32,12 +33,13 @@ const CommunityEvents: React.FC = () => {
                         href="https://ucdenverdata.formstack.com/forms/street_safety_event_registration?fbclid=IwAR3T76_hvdlzWgcOriG3X62KJSSSpNTBUyBKIsJhW31eYmpD64U8khjsUqs"
                         target="_blank">Info & RSVP</a></td>
                 </tr>
+                {/* <EventRow name="Rob Event" eventStart={new Date()} eventEnd={new Date()} linkTitle="link" url="http://google.com"/> */}
+                
                 <tr data-date="2019-11-13T18:00:00.000Z">
                     <th scope="row">Denver Streets Congress</th>
                     <td>Wednesday, November 13, 2019</td>
                     <td>11:30AM - 1PM</td>
-                    <td><a href="https://www.denverstreetspartnership.org/events/event-9/" target="_blank">Info & RSVP
-            Page</a></td>
+                    <td><a href="https://www.denverstreetspartnership.org/events/event-9/" target="_blank">Info & RSVP Page</a></td>
                 </tr>
                 <tr data-date="2019-11-16T23:59:00.000Z">
                     <th scope="row">Aurora Cranksgiving</th>

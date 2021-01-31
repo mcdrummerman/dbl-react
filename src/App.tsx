@@ -4,6 +4,7 @@ import { NavBar, Main, Footer } from './components/components';
 import './App.css';
 import Axios from 'axios';
 import dayjs from 'dayjs'
+const DEBUG = false;
 
 type StorageType = { date: Date, data: any };
 
@@ -30,7 +31,7 @@ class App extends Component {
       return null;
     }
     const data = JSON.parse(item) as StorageType;
-    const difference = dayjs().diff(dayjs(data.date), 'minute');
+    const difference = dayjs().diff(dayjs(data.date), 'minutes');
     if (difference <= 5) {
       return data;
     }
@@ -39,23 +40,26 @@ class App extends Component {
 
   async getData() {
     try {
-      if (this.storage) {
+      if (this.storage && !DEBUG) {
+        // we already have the data, return it
         return this.storage.data;
       }
       const response = await Axios.get('https://dbl-data.s3-us-west-2.amazonaws.com/dbl-events.json');
-      this.calendarData = response.data
-      this.storage = { date: new Date(), data: response.data };
 
+      const data = { date: new Date(), data: response.data };
+      // cache the data 
+      this.storage = data;
+      return data;
     } catch (e) {
       //console.log(e)
     }
   }
 
   render() {
-    const props = {events:this.calendarData};
+    const props = { events: this.storage?.data ?? [] };
     return (<div>
       <NavBar />
-      <Main {...props}/>
+      <Main {...props} />
       <Footer />
     </div>
     );

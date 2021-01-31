@@ -1,12 +1,12 @@
-import React from 'react';
-import { CommunityEvents, PublicMeetings } from './components';
+import React, { FunctionComponent } from 'react';
+import { Events } from '../types';
+import { CommunityEvents } from './components';
 import InfoBlock from './InfoBlock';
 
-const EventsRow: React.FC = () => {
+const EventsRow: FunctionComponent<Events> = (props) => {
     return (
         <div className="row">
-            <CommunityEvents />
-            <PublicMeetings />
+            <CommunityEvents {...props} />
             <InfoBlock />
         </div>
 

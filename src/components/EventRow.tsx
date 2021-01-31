@@ -12,7 +12,7 @@ const EventRow: FC<ps> = ({ name, eventStart, eventEnd, url, linkTitle }) => {
         <td>{moment(eventStart).format(timeFormat)} - {moment(eventEnd).format(timeFormat)}</td>
         <td><a
             href={url}
-            target="_blank">{linkTitle}</a></td>
+            target="_blank" rel="noopener noreferrer">{linkTitle}</a></td>
     </tr>)
 
 }

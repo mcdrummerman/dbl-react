@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (<footer className="container">
     <div className="row">
 
-      <a target="_blank" href="https://www.facebook.com/groups/345613403039899">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/groups/345613403039899">
 
         <i className="fab fa-facebook-square fa-4x"></i>
 

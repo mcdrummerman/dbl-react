@@ -11,12 +11,12 @@ const OtherActionBox: React.FC = () => {
             <h2><i className="fas fa-poll-h"></i> Surveys</h2>
             <p>Better decisions need data. Help them out by taking these mobility focused surveys.</p>
             <ul>
-                <li><a href="http://bit.ly/DenCompleteStreets" target="_blank">Complete Streets Guidelines</a> - Denver
+                <li><a href="http://bit.ly/DenCompleteStreets" target="_blank" rel="noopener noreferrer">Complete Streets Guidelines</a> - Denver
               Public Works</li>
-                <li><a href="http://svy.mk/1HS4Wvy" target="_blank">DRCOG Transportation Survey</a> - Denver Regional
+                <li><a href="http://svy.mk/1HS4Wvy" target="_blank" rel="noopener noreferrer">DRCOG Transportation Survey</a> - Denver Regional
               Council of Governments</li>
                 <li><a href="https://www.denvergov.org/content/denvergov/en/broadway-mobility/transit/feedback.html"
-                    target="_blank">Lincoln Transit Enhancements
+                    target="_blank" rel="noopener noreferrer">Lincoln Transit Enhancements
                 Broadway Station to 7th Avenue</a> - Denver Public Works</li>
 
             </ul>

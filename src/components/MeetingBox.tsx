@@ -11,7 +11,7 @@ const MeetingBox: React.FC = () => {
 
             <div className="col-12">
                 <div className="text-center">
-                    <a href="https://dribbble.com/shots/2400516-Cycling-the-Seasons" target="_blank">
+                    <a href="https://dribbble.com/shots/2400516-Cycling-the-Seasons" target="_blank" rel="noopener noreferrer">
                         <img src="https://s3-us-west-2.amazonaws.com/denverbicyclelobby.com/img/source.gif"
                             alt="Cycling the Seasons" title="Cycling the Seasons" id="cycling-the-seasons" className="img-fluid rounded"
                         /></a>

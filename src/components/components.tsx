@@ -11,8 +11,10 @@ import OtherActionBox from './OtherActionBox';
 import CommunityEvents from './CommunityEvents';
 import PublicMeetings from './PublicMeetings';
 import InfoBlock from './InfoBlock';
+import Alert from './Alert';
 
 export {
+    Alert,
     NavBar,
     JumboTron,
     Main,

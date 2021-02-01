@@ -1,11 +1,12 @@
 import React, { FunctionComponent } from 'react';
-import { Events } from '../types';
-import { JumboTron } from './components';
+import { CalendarEvents } from '../types';
+import { JumboTron, Alert } from './components';
 import MainContainer from './MainContainer';
 
 
-const Main: FunctionComponent<Events> = (props) => {
+const Main: FunctionComponent<CalendarEvents> = (props) => {
   return (<main role="main">
+    <Alert />
     <JumboTron />
     <MainContainer {...props} />
   </main>)

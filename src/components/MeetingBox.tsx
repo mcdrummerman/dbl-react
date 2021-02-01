@@ -1,13 +1,47 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
+import { CalendarEvents } from '../types';
+import dayjs from 'dayjs';
+const timeFormat = 'h:mmA';
 
-const MeetingBox: React.FC = () => {
+const MeetingBox: FunctionComponent<CalendarEvents> = ({ dblMeetups }) => {
+
+    const meetup = dblMeetups.length ? dblMeetups[0] : null;
+    const meetupIsOver: boolean = meetup === null ? true : dayjs(meetup.endIsoString).isBefore(dayjs());
+
+
+
     return (
         <div className="col-md-4">
             <h2><i className="far fa-calendar-alt"></i> Next DBL Meeting</h2>
+            {
+                meetupIsOver &&
+                <div className="alert alert-primary text-center" role="alert">
+                    <p><b>TBD</b></p>
+                </div>
 
-            <div className="alert alert-primary text-center" data-show-after="2019-11-21T03:00:00.000Z" role="alert">
-                <p>TBD</p>
-            </div>
+            }
+            {
+                !meetupIsOver && meetup !== null &&
+                <div>
+                    <p>
+                        <ul className="list-group">
+                            <li className="list-group-item active">{dayjs(meetup.startIsoString).format('dddd, MMMM D, YYYY')}</li>
+                            <li className="list-group-item"><i className="far fa-clock"></i> {dayjs(meetup.startIsoString).format(timeFormat)}</li>
+                            <li className="list-group-item"><i className="fas fa-info-circle"></i> {meetup.description}</li>
+                            <li className="list-group-item"><i className="fas fa-map-marked-alt"></i> <a
+                                href={meetup.location} target="_blank" rel="noopener noreferrer">Zoom link</a></li>
+
+
+                            <li className="list-group-item"><i className="fab fa-accessible-icon"></i> Since you're at home you should be all set</li>
+                            <li className="list-group-item"><i className="fas fa-utensils"></i> Bring your own snacks</li>
+                            <li className="list-group-item"><i className="fas fa-beer"></i> Bring your own beverage</li>
+                            <p>
+                            </p>
+
+                        </ul>
+                    </p>
+                </div>
+            }
 
             <div className="col-12">
                 <div className="text-center">

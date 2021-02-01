@@ -21,11 +21,7 @@ const DBLActionBox: React.FC = () => {
             </div>
             <p><a className="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://denverbicyclelobby.store" role="button">Get Stuff</a></p>
 
-            <h2><i className="fab fa-slack"></i> Slack Channel</h2>
-            <p>Request to join the Slack channel for all the DBL discussions.</p>
-            <p><a className="btn btn-primary" target="_blank" rel="noopener noreferrer"
-                href="mailto:info@dbl.bike?subject=Slack%20request&body=I%20would%20like%20to%20join%20the%20Denver%20Bicycle%20Lobby%20Slack%20channel!"
-                role="button">Request</a></p>
+          
         </div>
     );
 };

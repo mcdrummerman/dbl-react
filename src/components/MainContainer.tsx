@@ -1,12 +1,12 @@
 import React, { FunctionComponent } from 'react';
-import { Events } from '../types';
+import { CalendarEvents } from '../types';
 import { PrimaryRow, EventsRow } from './components';
 
-const MainContainer: FunctionComponent<Events> = (props) => {
+const MainContainer: FunctionComponent<CalendarEvents> = (props) => {
 
   return (
     <div className="container-fluid">
-      <PrimaryRow />
+      <PrimaryRow {...props} />
       <div className="row">&nbsp;</div>
       <EventsRow {...props} />
     </div>)

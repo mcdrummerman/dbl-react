@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from 'react';
-import { Events } from '../types';
+import { CalendarEvents } from '../types';
 import { CommunityEvents } from './components';
 import InfoBlock from './InfoBlock';
 
-const EventsRow: FunctionComponent<Events> = (props) => {
+const EventsRow: FunctionComponent<CalendarEvents> = (props) => {
     return (
         <div className="row">
             <CommunityEvents {...props} />

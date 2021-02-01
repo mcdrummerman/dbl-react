@@ -2,14 +2,14 @@ import { Component } from 'react';
 import React from 'react';
 import { NavBar, Main, Footer } from './components/components';
 import './App.css';
-import Axios from 'axios';
+import Axios, { AxiosRequestConfig } from 'axios';
 import dayjs from 'dayjs'
+import { CalendarEvents } from './types';
 const DEBUG = false;
 
-type StorageType = { date: Date, data: any };
+type StorageType = { date: Date, data: CalendarEvents };
 
 class App extends Component {
-  private calendarData: any;
   private storageKey = 'cal-data';
 
   async componentDidMount() {
@@ -44,19 +44,21 @@ class App extends Component {
         // we already have the data, return it
         return this.storage.data;
       }
-      const response = await Axios.get('https://dbl-data.s3-us-west-2.amazonaws.com/dbl-events.json');
+      const response = await Axios.get('https://dbl-data.s3-us-west-2.amazonaws.com/dbl-events.json', { headers: { 'Cache-Control': 'no-store, max-age=0' } as AxiosRequestConfig });
 
       const data = { date: new Date(), data: response.data };
       // cache the data 
       this.storage = data;
       return data;
     } catch (e) {
-      //console.log(e)
     }
   }
 
   render() {
-    const props = { events: this.storage?.data ?? [] };
+    const props = {
+      upcomingEvents: this.storage?.data?.upcomingEvents ?? [],
+      dblMeetups: this.storage?.data?.dblMeetups ?? []
+    } as CalendarEvents;
     return (<div>
       <NavBar />
       <Main {...props} />

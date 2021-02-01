@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
+import { CalendarEvents } from '../types';
 import { MeetingBox, DBLActionBox, OtherActionBox } from './components';
 
-const PrimaryRow: React.FC = () => {
+const PrimaryRow: FunctionComponent<CalendarEvents> = (props) => {
     return (
         <div className="row">
-            <MeetingBox />
+            <MeetingBox {...props} />
             <DBLActionBox />
             <OtherActionBox />
         </div>

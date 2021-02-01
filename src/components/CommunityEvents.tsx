@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from 'react';
-import { Events } from '../types';
+import { CalendarEvents } from '../types';
 import dayjs from 'dayjs';
 const timeFormat = 'h:mmA';
 
-const CommunityEvents: FunctionComponent<Events> = ({ events }) => {
+const CommunityEvents: FunctionComponent<CalendarEvents> = ({ upcomingEvents }) => {
     return (
         <div className="col-md-12 col-sm-12">
             <h2><i className="far fa-calendar-alt"></i>&nbsp;Upcoming&nbsp;Events</h2>
@@ -17,7 +17,7 @@ const CommunityEvents: FunctionComponent<Events> = ({ events }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {(events ?? []).filter(item => {
+                    {(upcomingEvents ?? []).filter(item => {
                         const end = dayjs(item.endIsoString),
                             now = dayjs();
                         return now.isBefore(end);

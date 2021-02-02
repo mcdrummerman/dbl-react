@@ -5,7 +5,8 @@ export type SimpleEvent = {
   location: string,
   title: string,
   id: string,
-  type: MeetingType
+  type: MeetingType,
+  isMultiDay: boolean
 };
 
 export type MeetingType = 'dbl-meetup' | 'upcoming-event';

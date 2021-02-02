@@ -5,10 +5,8 @@ const timeFormat = 'h:mmA';
 
 const MeetingBox: FunctionComponent<CalendarEvents> = ({ dblMeetups }) => {
 
-    const meetup = dblMeetups.length ? dblMeetups[0] : null;
-    const meetupIsOver: boolean = meetup === null ? true : dayjs(meetup.endIsoString).isBefore(dayjs());
-
-
+    const meetup = dblMeetups.length ? dblMeetups.filter(e => dayjs(e.endIsoString).isAfter(dayjs()))[0] : null;
+    const meetupIsOver: boolean = !meetup ? true : dayjs(meetup.endIsoString).isBefore(dayjs());
 
     return (
         <div className="col-md-4">

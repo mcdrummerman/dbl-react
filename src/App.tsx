@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import React from 'react';
-import { NavBar, Main, Footer } from './components/components';
+import { NavBar, Main, Footer } from './components';
 import './App.css';
 import Axios, { AxiosRequestConfig } from 'axios';
 import dayjs from 'dayjs'

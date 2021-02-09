@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { CalendarEvents } from '../types';
-import { JumboTron, Alert } from './components';
+import { JumboTron, Alert } from '.';
 import MainContainer from './MainContainer';
 
 

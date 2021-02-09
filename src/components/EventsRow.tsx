@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { CalendarEvents } from '../types';
-import { CommunityEvents } from './components';
+import { CommunityEvents } from '.';
 import InfoBlock from './InfoBlock';
 
 const EventsRow: FunctionComponent<CalendarEvents> = (props) => {

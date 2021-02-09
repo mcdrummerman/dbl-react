@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { CalendarEvents } from '../types';
-import { MeetingBox, DBLActionBox, OtherActionBox } from './components';
+import { MeetingBox, DBLActionBox, OtherActionBox } from '.';
 
 const PrimaryRow: FunctionComponent<CalendarEvents> = (props) => {
     return (

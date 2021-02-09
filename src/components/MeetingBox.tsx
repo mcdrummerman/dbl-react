@@ -21,35 +21,33 @@ const MeetingBox: FunctionComponent<CalendarEvents> = ({ dblMeetups }) => {
             {
                 !meetupIsOver && meetup !== null &&
                 <div>
-                    <p>
-                        <ul className="list-group">
-                            <li className="list-group-item active">{dayjs(meetup.startIsoString).format('dddd, MMMM D, YYYY')}</li>
-                            <li className="list-group-item"><i className="far fa-clock"></i> {dayjs(meetup.startIsoString).format(timeFormat)}</li>
-                            <li className="list-group-item"><i className="fas fa-info-circle"></i> {meetup.description}</li>
-                            <li className="list-group-item"><i className="fas fa-map-marked-alt"></i> <a
-                                href={meetup.location} target="_blank" rel="noopener noreferrer">Zoom link</a></li>
+                    <ul className="list-group">
+                        <li className="list-group-item active">{dayjs(meetup.startIsoString).format('dddd, MMMM D, YYYY')}</li>
+                        <li className="list-group-item"><i className="far fa-clock"></i> {dayjs(meetup.startIsoString).format(timeFormat)}</li>
+                        <li className="list-group-item"><i className="fas fa-info-circle"></i> {meetup.description}</li>
+                        <li className="list-group-item"><i className="fas fa-map-marked-alt"></i> <a
+                            href={meetup.location} target="_blank" rel="noopener noreferrer">Zoom link</a></li>
 
 
-                            <li className="list-group-item"><i className="fab fa-accessible-icon"></i> Since you're at home you should be all set</li>
-                            <li className="list-group-item"><i className="fas fa-utensils"></i> Bring your own snacks</li>
-                            <li className="list-group-item"><i className="fas fa-beer"></i> Bring your own beverage</li>
-                            <p>
-                            </p>
-
-                        </ul>
-                    </p>
+                        <li className="list-group-item"><i className="fab fa-accessible-icon"></i> Since you're at home you should be all set</li>
+                        <li className="list-group-item"><i className="fas fa-utensils"></i> Bring your own snacks</li>
+                        <li className="list-group-item"><i className="fas fa-beer"></i> Bring your own beverage</li>
+                        <p>
+                        </p>
+                    </ul>
                 </div>
             }
-
-            <div className="col-12">
-                <div className="text-center">
-                    <a href="https://dribbble.com/shots/2400516-Cycling-the-Seasons" target="_blank" rel="noopener noreferrer">
-                        <img src="https://s3-us-west-2.amazonaws.com/denverbicyclelobby.com/img/source.gif"
-                            alt="Cycling the Seasons" title="Cycling the Seasons" id="cycling-the-seasons" className="img-fluid rounded"
-                        /></a>
+            { meetupIsOver &&
+                <div className="col-12">
+                    <div className="text-center">
+                        <a href="https://dribbble.com/shots/2400516-Cycling-the-Seasons" target="_blank" rel="noopener noreferrer">
+                            <img src="https://s3-us-west-2.amazonaws.com/denverbicyclelobby.com/img/source.gif"
+                                alt="Cycling the Seasons" title="Cycling the Seasons" id="cycling-the-seasons" className="img-fluid rounded"
+                            /></a>
+                    </div>
+                    <br />
                 </div>
-                <br />
-            </div>
+            }
             <br />
 
         </div>

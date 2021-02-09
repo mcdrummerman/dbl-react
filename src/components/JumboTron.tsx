@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
-const JumboTron: React.FC = () => {
-  return (<div className="jumbotron">
+const JumboTron: FunctionComponent<{ styleOverrides: React.CSSProperties }> = (props = { styleOverrides: {} }) => {
+  return (<div className="jumbotron" style={props.styleOverrides}>
     <img alt="" src="https://s3-us-west-2.amazonaws.com/denverbicyclelobby.com/img/DBL-logo-small.jpg" />
   </div>)
 }

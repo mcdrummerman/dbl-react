@@ -12,9 +12,11 @@ import CommunityEvents from './CommunityEvents';
 import PublicMeetings from './PublicMeetings';
 import InfoBlock from './InfoBlock';
 import Alert from './Alert';
+import CodeOfConduct from './CodeOfConduct';
 
 export {
     Alert,
+    CodeOfConduct,
     NavBar,
     JumboTron,
     Main,

@@ -7,7 +7,7 @@ import dayjs from 'dayjs'
 import { CalendarEvents } from './types';
 const DEBUG = false;
 
-type StorageType = { date: Date, data: CalendarEvents };
+type StorageType = { date: Date, data: CalendarEvents, lastModified: string };
 
 class App extends Component {
   private storageKey = 'cal-data';
@@ -17,7 +17,7 @@ class App extends Component {
     this.forceUpdate();
   }
 
-  private set storage(data: StorageType | null) {
+  private setStorage(data: StorageType | null) {
     if (!data) {
       sessionStorage.removeItem(this.storageKey);
     } else {
@@ -25,14 +25,20 @@ class App extends Component {
     }
   }
 
-  private get storage(): StorageType | null {
+  private getStorage(): StorageType | null {
     const item = sessionStorage.getItem(this.storageKey);
     if (!item) {
       return null;
     }
     const data = JSON.parse(item) as StorageType;
-    const difference = dayjs().diff(dayjs(data.date), 'minutes');
-    if (difference <= 5) {
+    return data;
+  }
+
+  private getStorageIfUnchanged(lastModified: string) {
+    const data = this.getStorage();
+    if (!data) { return null; }
+
+    if (dayjs(lastModified).isSame(dayjs(data.lastModified))) {
       return data;
     }
     return null;
@@ -40,15 +46,18 @@ class App extends Component {
 
   async getData() {
     try {
-      if (this.storage && !DEBUG) {
+      const headResponse = await Axios.head('https://dbl-data.s3-us-west-2.amazonaws.com/dbl-events.json', { headers: { 'Cache-Control': 'no-store, max-age=0' } as AxiosRequestConfig });
+      const storedData = this.getStorageIfUnchanged(headResponse?.headers['last-modified']);
+      if (storedData && !DEBUG) {
         // we already have the data, return it
-        return this.storage.data;
+        return storedData;
       }
+
       const response = await Axios.get('https://dbl-data.s3-us-west-2.amazonaws.com/dbl-events.json', { headers: { 'Cache-Control': 'no-store, max-age=0' } as AxiosRequestConfig });
 
-      const data = { date: new Date(), data: response.data };
+      const data: StorageType = { date: new Date(), data: response.data, lastModified: response.headers['last-modified'] };
       // cache the data 
-      this.storage = data;
+      this.setStorage(data);
       return data;
     } catch (e) {
     }
@@ -56,8 +65,8 @@ class App extends Component {
 
   render() {
     const props = {
-      upcomingEvents: this.storage?.data?.upcomingEvents ?? [],
-      dblMeetups: this.storage?.data?.dblMeetups ?? []
+      upcomingEvents: this.getStorage()?.data?.upcomingEvents ?? [],
+      dblMeetups: this.getStorage()?.data?.dblMeetups ?? []
     } as CalendarEvents;
     return (<div>
       <NavBar />

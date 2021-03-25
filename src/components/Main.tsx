@@ -6,9 +6,9 @@ const Main: FunctionComponent<CalendarEvents> = (props) => {
   return (<main role="main">
     <Alert  {...{
       type: 'success',
-      text: 'Enjoying Car Free Parks and Shared Streets in Denver? Let your electeds know',
-      linkText: 'Email to show support for Open/Shared Streets and Car Free Denver Parks',
-      linkUrl: 'http://denverbicyclelobby.com/emails.html'
+      text: 'N. Tejon is an important connection for riders.',
+      linkText: 'Show your support for the Tejon Street protected bike lane!',
+      linkUrl: 'https://secure.everyaction.com/8TztGmOoW0O-rSV4BF9O0g2'
     }} />
     <JumboTron {...{ styleOverrides: { marginBottom: 0 } }} />
     <CodeOfConduct />

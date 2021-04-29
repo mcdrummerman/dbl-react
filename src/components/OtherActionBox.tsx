@@ -11,12 +11,7 @@ const OtherActionBox: React.FC = () => {
             <h2><i className="fas fa-poll-h"></i> Data & Information</h2>
             <p>Better decisions need data. Help them out by taking these mobility focused surveys.</p>
             <ul>
-                <li><a href="https://forms.gle/NCsT33g9NP1TCEsV6" target="_blank" rel="noopener noreferrer">Complete Streets Design Guide Feedback</a>
-              (<a href="https://tooledesign1-my.sharepoint.com/:f:/g/personal/rfinfer_tooledesign_com/Eun7eoQ942pPmqAp8dxpLdcB-kkNZWXHLFK2fNhs0oVrNA?e=JdpXyr" target="_blank" rel="noopener noreferrer">download here</a> ) </li>
-                <li><a href="https://storymaps.arcgis.com/stories/23aa1f1e3e7d40a5aa870703b733a725" target="_blank" rel="noopener noreferrer">Denver
-                Community Transportation
-                Networks
-                Public Survey &amp; Input Map</a> </li>
+                <li>Feedback for the Denver Community Transportation Networks can be submitted <a href="https://denvermoves.konveio.com/" target="_blank" rel="noopener noreferrer">here (Konveio)</a></li>
             </ul>
             <h2><i className="fab fa-slack"></i> Slack Channel</h2>
             <p>Request to join the Slack channel for all the DBL discussions.</p>

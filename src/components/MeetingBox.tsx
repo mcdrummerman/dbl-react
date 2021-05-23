@@ -25,17 +25,18 @@ const MeetingBox: FunctionComponent<CalendarEvents> = ({ dblMeetups }) => {
                         <li className="list-group-item active">{dayjs(meetup.startIsoString).format('dddd, MMMM D, YYYY')}</li>
                         <li className="list-group-item"><i className="far fa-clock"></i> {dayjs(meetup.startIsoString).format(timeFormat)}</li>
                         <li className="list-group-item"><i className="fas fa-info-circle"></i> {meetup.description}</li>
-                        <li className="list-group-item"><i className="fas fa-map-marked-alt"></i> <a
-                            href={meetup.location} target="_blank" rel="noopener noreferrer">Zoom link</a></li>
+                        <li className="list-group-item"><i className="fas fa-link"></i> <a
+                            href={meetup.location} target="_blank" rel="noopener noreferrer">Link</a></li>
 
 
-                        <li className="list-group-item"><i className="fab fa-accessible-icon"></i> Since you're at home you should be all set</li>
+                        {/* <li className="list-group-item"><i className="fab fa-accessible-icon"></i> Since you're at home you should be all set</li>
                         <li className="list-group-item"><i className="fas fa-utensils"></i> Bring your own snacks</li>
-                        <li className="list-group-item"><i className="fas fa-beer"></i> Bring your own beverage</li>
+                        <li className="list-group-item"><i className="fas fa-beer"></i> Bring your own beverage</li> */}
                         <p>
                         </p>
                     </ul>
                 </div>
+                
             }
             { meetupIsOver &&
                 <div className="col-12">

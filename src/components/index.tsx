@@ -13,6 +13,7 @@ import PublicMeetings from './PublicMeetings';
 import InfoBlock from './InfoBlock';
 import Alert from './Alert';
 import CodeOfConduct from './CodeOfConduct';
+import SpecialEvent from './SpecialEvent'
 
 export {
     Alert,
@@ -29,5 +30,6 @@ export {
     OtherActionBox,
     CommunityEvents,
     PublicMeetings,
-    InfoBlock
+    InfoBlock,
+    SpecialEvent
 }

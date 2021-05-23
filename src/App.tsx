@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import React from 'react';
-import { NavBar, Main, Footer } from './components';
+import { NavBar, Main, Footer, SpecialEvent } from './components';
 import './App.css';
 import Axios, { AxiosRequestConfig } from 'axios';
 import dayjs from 'dayjs'
@@ -68,12 +68,27 @@ class App extends Component {
       upcomingEvents: this.getStorage()?.data?.upcomingEvents ?? [],
       dblMeetups: this.getStorage()?.data?.dblMeetups ?? []
     } as CalendarEvents;
-    return (<div>
-      <NavBar />
-      <Main {...props} />
-      <Footer />
-    </div>
-    );
+
+    const startString = 'Sun May 23 2021 14:20:00 GMT-0600 (Mountain Daylight Time)';
+    const endString = 'Sun May 23 2021 16:20:00 GMT-0600 (Mountain Daylight Time)';
+
+    const start = dayjs(startString);
+    const end = dayjs(endString);
+    const now = dayjs(new Date());
+
+    if (now.isAfter(start) && now.isBefore(end)) {
+      return <SpecialEvent />
+    } else {
+      return (
+
+        <div>
+          <NavBar />
+          <Main {...props} />
+          <Footer />
+        </div>
+
+      );
+    }
   }
 
 

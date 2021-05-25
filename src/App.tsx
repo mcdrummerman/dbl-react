@@ -69,16 +69,19 @@ class App extends Component {
       dblMeetups: this.getStorage()?.data?.dblMeetups ?? []
     } as CalendarEvents;
 
-    const startString = 'Sun May 23 2021 14:20:00 GMT-0600 (Mountain Daylight Time)';
+    const startString = 'Sun May 23 2021 14:00:00 GMT-0600 (Mountain Daylight Time)';
     const endString = 'Sun May 23 2021 16:20:00 GMT-0600 (Mountain Daylight Time)';
 
     const start = dayjs(startString);
     const end = dayjs(endString);
     const now = dayjs(new Date());
 
+    // show the special event compopnent if the our custom logic is true
     if (now.isAfter(start) && now.isBefore(end)) {
       return <SpecialEvent />
-    } else {
+    } 
+    // show the standard stuff
+    else {
       return (
 
         <div>
@@ -90,8 +93,6 @@ class App extends Component {
       );
     }
   }
-
-
 }
 
 export default App;

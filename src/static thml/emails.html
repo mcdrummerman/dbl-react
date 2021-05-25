@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="The Denver Bicycle Lobby">
+
+  <meta property="og:url" content="http://dbl.bike/" />
+  <neta property="og:type" content="website" />
+  <meta property="og:title" content="Denver Bicycle Lobby" />
+  <meta property="og:description" content="Email your elected for open and shared streets!" />
+  <meta property="og:image"
+    content="https://s3-us-west-2.amazonaws.com/denverbicyclelobby.com/img/DBL-logo-small.jpg" />
+  <title>Denver Bicycle Lobby</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity=""
+    crossorigin="anonymous">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .dbl-header {
+      background-image: url(https://s3-us-west-2.amazonaws.com/denverbicyclelobby.com/img/stop+killing+us.jpeg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .swag-image {
+      width: 120px;
+    }
+
+    .swag-media {
+      margin-bottom: 16px;
+    }
+
+    #cycling-the-seasons {
+      max-width: 300px;
+    }
+
+    .red-text {
+      color: red
+    }
+
+    .large-text {
+      font-size: larger;
+    }
+
+    .click-box {
+      border-width: 2px;
+      border-color: blue;
+      cursor: pointer;
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css" rel="stylesheet">
+  <link rel="icon" type="image/png"
+    href="https://s3-us-west-2.amazonaws.com/denverbicyclelobby.com/img/android-chrome-192x192.png">
+  <script src="https://kit.fontawesome.com/2b604016cb.js"></script>
+  <noscript>You need javascript for this to work. Sorry.</noscript>
+</head>
+
+<body>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Denver Bicycle Lobby">
+  <meta property="og:description" content="Email your elected for open and shared streets!">
+  <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/denverbicyclelobby.com/img/DBL-logo-small.jpg">
+  <title>Denver Bicycle Lobby</title>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="http://denverbicyclelobby.com/">Denver Bicycle Lobby</a>
+    <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  <div role="main" class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="jumbotron">
+          <p><b>Click the box below that matches your Denver City Council District and <strong>personalize your message!</strong></b> This will prepopulate the emails
+            for
+            the Mayor, City Council, Director of the Department of Transportation, Parks Board members, as well as your
+            specific city councilor and parks board member in your email client.</p>
+          <p><i><u>If you do not have an email client installed try doing this on your mobile device.</u></i></p>
+          <p><b>The body and subject line will have content but you should use it as inspiration and add your own
+              message
+              so this does not get dismissed as a form email.</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      
+        <p><i>Don't know your district?</i>&nbsp;Find your Denver City Council District <a
+            href="https://www.denvergov.org/maps/map/councildistricts" target="_blank">here</a>.
+        </p>
+      
+    </div>
+    <div class="row">
+      <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(1,this)">
+        <div class="">1 - Amanda Sandoval</div>
+      </a> <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(2,this)">
+        <div class="">2 - Kevin Flynn</div>
+      </a>
+    </div>
+    <div class="row">
+      <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(3,this)">
+        <div class="">3 - Jamie Torres</div>
+      </a> <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(4,this)">
+        <div class="">4 - Kendra Black</div>
+      </a>
+    </div>
+    <div class="row">
+      <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(5,this)">
+        <div class="">5 - Amanda Sawyer</div>
+      </a> <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(6,this)">
+        <div class="">6 - Paul Kashmann</div>
+      </a>
+    </div>
+    <div class="row">
+      <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(7,this)">
+        <div class="">7 - Jolon Clark</div>
+      </a> <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(8,this)">
+        <div class="">8 - Christopher Herndon</div>
+      </a>
+    </div>
+    <div class="row">
+      <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(9,this)">
+        <div class="">9 - Candi CdeBaca</div>
+      </a> <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(10,this)">
+        <div class="">10 - Chris Hinds</div>
+      </a>
+    </div>
+    <div class="row">
+      <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(11,this)">
+        <div class="">11 - Stacie Gilmore</div>
+      </a>
+      <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(0,this)">
+        <div class="">Not sure but let me continue anyway</div>
+      </a>
+    </div>
+
+  </div>
+
+  <footer class="container">
+    <div class="row"></div>
+    <p>© DBL 2020</p>
+  </footer>
+</body>
+<script>
+  function handleMail(district, b, c) {
+    const baseSubject = `Keep%20our%20Shared%20Streets%20and%20Car%20Free%20Parks`;
+    let subject = district > 0 ? `${baseSubject} in District ${district}` : baseSubject;
+    let body = 'The%20Open%20and%20Shared%20Streets%20are%20an%20incredibly%20positive%20change%20on%20Denver%27s%20streets.%20I%20am%20writing%20to%20express%20my%20strong%20support%20for%20the%20continued%20absence%20of%20cars%20from%20Denver%27s%20parks%20as%20well%20as%20improving%20and%20making%20the%20Shared%20Streets%20permanent.%0A%0AParks%20should%20be%20accessible%20to%20all%20but%20this%20does%20not%20necessitate%20car%20travel%20within%20them%2C%20please%20keep%20the%20parks%20car-free.%20The%20Shared%20Streets%20have%20been%20excellent%2C%20now%20it%20is%20time%20to%20make%20them%20permanent%20and%20think%20about%20how%20they%20can%20be%20improved.%0A%0AIf%20this%20pandemic%20has%20shown%20us%20anything%20it%20is%20that%20we%20can%20act%20quickly%20and%20no%20longer%20must%20accept%20the%20status%20quo.%20Please%20continue%20to%20make%20our%20streets%20friendlier%20for%20all%20modes%20of%20travel%20by%20making%20the%20Shared%20and%20Open%20Streets%20permanent.';
+    let toEmail = `mailto:Michael.Hancock@denvergov.org,alan.salazar@denvergov.org,dencc@denvergov.org,parksandrecreation@denvergov.org?bcc=happy.haynes@denvergov.org,ERRC@denvergov.org,kniechatlarge@denvergov.org,ortegaatlarge@denvergov.org,info@dbl.bike,Eulois.Cleckley@denvergov.org,john.paterson@denvergov.org,SamVPRAB@gmail.com,Tashmesia.Mitchell@gmail.com,marlarod2400@gmail.com,frnavarro@comcast.net,Trena_Jones@dpsk12.org`
+    let councilEmail = '';
+    switch (district) {
+      case 0:
+
+        break;
+      case 1:
+        toEmail = `${toEmail},districtone@denvergov.org,ndcopeland@aol.com`;
+        break;
+      case 2:
+        toEmail = `${toEmail},kevin.flynn@denvergov.org,fran@francolemancc2.com`;
+        break;
+      case 3:
+        toEmail = `${toEmail},jamie.torres@denvergov.org,DenverParksLee@gmail.com`;
+        break;
+      case 4:
+        toEmail = `${toEmail},kendra.black@denvergov.org,fxrowe@gmail.com`;
+        break;
+      case 5:
+        toEmail = `${toEmail},amanda.sawyer@denvergov.org,meredithprab@gmail.com`;
+        break;
+      case 6:
+        toEmail = `${toEmail},paul.kashmann@denvergov.org,lynnegarramone@gmail.com`;
+        break;
+      case 7:
+        toEmail = `${toEmail},jolon.clark@denvergov.org,Amyrazz37@gmail.com`;
+        break;
+      case 8:
+        toEmail = `${toEmail},christopher.herndon@denvergov.org,lholben@hotmail.com`;
+        break;
+      case 9:
+        toEmail = `${toEmail},district9@denvergov.org,Lisa.Calderon@denvergov.org`;
+        break;
+      case 10:
+        toEmail = `${toEmail},chris.hinds@denvergov.org,mmckinleyprab@gmail.com`;
+        break;
+      case 11:
+        toEmail = `${toEmail},stacie.gilmore@denvergov.org,pamjiner@yahoo.com`;
+        break;
+      default:
+        console.log('what ' + district);
+    }
+    toEmail = `${toEmail},&subject=${subject}&body=${body}`;
+    b.href = toEmail;
+  }
+</script>
+
+</html>

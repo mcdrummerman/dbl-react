@@ -24,7 +24,7 @@ const MeetingBox: FunctionComponent<CalendarEvents> = ({ dblMeetups }) => {
                     <ul className="list-group">
                         <li className="list-group-item active">{dayjs(meetup.startIsoString).format('dddd, MMMM D, YYYY')}</li>
                         <li className="list-group-item"><i className="far fa-clock"></i> {dayjs(meetup.startIsoString).format(timeFormat)}</li>
-                        <li className="list-group-item"><i className="fas fa-info-circle"></i> {meetup.description}</li>
+                        <li className="list-group-item"><i className="fas fa-info-circle"></i><div dangerouslySetInnerHTML={{ __html: meetup.description }} /></li>
                         <li className="list-group-item"><i className="fas fa-link"></i> <a
                             href={meetup.location} target="_blank" rel="noopener noreferrer">Link</a></li>
 
@@ -36,9 +36,9 @@ const MeetingBox: FunctionComponent<CalendarEvents> = ({ dblMeetups }) => {
                         </p>
                     </ul>
                 </div>
-                
+
             }
-            { meetupIsOver &&
+            {meetupIsOver &&
                 <div className="col-12">
                     <div className="text-center">
                         <a href="https://dribbble.com/shots/2400516-Cycling-the-Seasons" target="_blank" rel="noopener noreferrer">

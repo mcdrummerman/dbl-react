@@ -9,7 +9,7 @@ const Main: FunctionComponent<CalendarEvents> = (props) => {
       text: 'DBL Calls to action',
       linkText: 'Visit the Action Center',
       linkUrl: 'http://denverbicyclelobby.com/action.html',
-      show: true
+      show: false
     }} />
     <JumboTron {...{ styleOverrides: { marginBottom: 0 } }} />
     <CodeOfConduct />

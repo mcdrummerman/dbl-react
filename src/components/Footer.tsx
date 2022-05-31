@@ -36,6 +36,14 @@ const Footer: React.FC = () => {
 
       </div>
       <div className="col-xs-2 mx-2 mb-1">
+        <a target="_blank" rel="noopener noreferrer" title="TikTok" href="https://www.tiktok.com/@denverbicyclelobby">
+
+          <i className="fab fa-tiktok fa-4x" aria-hidden="true"></i>
+
+        </a>
+
+      </div>
+      <div className="col-xs-2 mx-2 mb-1">
         <a target="_blank" rel="noopener noreferrer" title="Blog" href="http://blog.dbl.bike">
 
           <i className="fas fa-blog fa-4x" aria-hidden="true"></i>

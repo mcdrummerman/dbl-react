@@ -11,6 +11,7 @@ const OtherActionBox: React.FC = () => {
             <h2><i className="fas fa-poll-h"></i> Data & Information</h2>
             <p>Better decisions need data. Help them out by taking these mobility focused surveys.</p>
             <ul>
+                <li>DBL's <a href="https://denverbicyclelobby.com/crash_map.html" target="_blank" rel="noopener noreferrer">Denver Crash Data Map </a></li>
                 <li>DOTI is looking to plan for 2050 give your input on Denver Moves Everyone <a href="https://denvermoveseveryone.com/" target="_blank" rel="noopener noreferrer">here</a></li>
             </ul>
             <h2><i className="fab fa-slack"></i> Slack Channel</h2>

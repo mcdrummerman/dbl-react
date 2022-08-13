@@ -9,7 +9,7 @@ const OtherActionBox: React.FC = () => {
                 href="mailto:hancock-milehighmayor@denvergov.org,Michael.Hancock@denvergov.org?bcc=info@dbl.bike&cc=Eulois.Cleckley@denvergov.org&subject=Safe%20streets%20for%20Denver%2C%20now%21&body=Mayor%20Hancock%2C%20%0A%0AI%20want%20safe%20streets%20in%20Denver%20now,%20so%20I%20can%20survive.%0A%0A"
                 rel="EMAIL">Email Mayor Hancock</a></p> */}
             <h2><i className="fas fa-poll-h"></i> Data & Information</h2>
-            <p>Better decisions need data. Help them out by taking these mobility focused surveys.</p>
+            <p>{/* title here if needed*/}</p>
             <ul>
                 <li>DBL's <a href="https://denverbicyclelobby.com/crash_map.html" target="_blank" rel="noopener noreferrer">Denver Crash Data Map </a></li>
                 <li>DOTI is looking to plan for 2050 give your input on Denver Moves Everyone <a href="https://denvermoveseveryone.com/" target="_blank" rel="noopener noreferrer">here</a></li>

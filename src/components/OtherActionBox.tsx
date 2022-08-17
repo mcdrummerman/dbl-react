@@ -12,6 +12,7 @@ const OtherActionBox: React.FC = () => {
             <p>{/* title here if needed*/}</p>
             <ul>
                 <li>DBL's <a href="https://denverbicyclelobby.com/crash_map.html" target="_blank" rel="noopener noreferrer">Denver Crash Data Map </a></li>
+                <li>Parks and Rec <a href="https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Parks/Trails/Trail-Detours#section-6" target="_blank" rel="noopener noreferrer">Trail detours</a></li>
                 <li>DOTI is looking to plan for 2050 give your input on Denver Moves Everyone <a href="https://denvermoveseveryone.com/" target="_blank" rel="noopener noreferrer">here</a></li>
             </ul>
             <h2><i className="fab fa-slack"></i> Slack Channel</h2>

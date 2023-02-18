@@ -8,7 +8,7 @@ const Main: FunctionComponent<CalendarEvents> = (props) => {
     <Alert  {...{
       type: 'warn',
       text: 'DBL Candidate ',
-      linkText: 'Questionare Responses!',
+      linkText: 'Questionnaires Responses!',
       linkUrl: 'http://denverbicyclelobby.com/candidates2023.html',
       show: true
     }} />

@@ -5,14 +5,15 @@ import { MainContainer, JumboTron, Alert, CodeOfConduct } from '.';
 const Main: FunctionComponent<CalendarEvents> = (props) => {
   return (<main role="main">
     <Alert  {...{
-      type: 'success',
-      text: 'DBL Calls to action',
-      linkText: 'Visit the Action Center',
-      linkUrl: 'http://denverbicyclelobby.com/action.html',
+      type: 'warn',
+      text: 'DBL Candidate ',
+      linkText: 'Questionare Responses!',
+      linkUrl: 'http://denverbicyclelobby.com/candidates2023.html',
       show: false
     }} />
     <JumboTron {...{ styleOverrides: { marginBottom: 0 } }} />
     <CodeOfConduct />
+
     <MainContainer {...props} />
   </main>)
 }

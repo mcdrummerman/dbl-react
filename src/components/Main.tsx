@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { CalendarEvents } from '../types';
 import { MainContainer, JumboTron, Alert, CodeOfConduct } from '.';
+import About from './About';
 
 const Main: FunctionComponent<CalendarEvents> = (props) => {
   return (<main role="main">
@@ -9,9 +10,10 @@ const Main: FunctionComponent<CalendarEvents> = (props) => {
       text: 'DBL Candidate ',
       linkText: 'Questionare Responses!',
       linkUrl: 'http://denverbicyclelobby.com/candidates2023.html',
-      show: false
+      show: true
     }} />
     <JumboTron {...{ styleOverrides: { marginBottom: 0 } }} />
+    <About />
     <CodeOfConduct />
 
     <MainContainer {...props} />

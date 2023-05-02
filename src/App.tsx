@@ -2,7 +2,7 @@ import { Component } from 'react';
 import React from 'react';
 import { NavBar, Main, Footer, SpecialEvent } from './components';
 import './App.css';
-import Axios, { AxiosHeaders, AxiosRequestConfig, RawAxiosRequestHeaders } from 'axios';
+import Axios, { RawAxiosRequestHeaders } from 'axios';
 import dayjs from 'dayjs'
 import { CalendarEvents } from './types';
 const DEBUG = false;

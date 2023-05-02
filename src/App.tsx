@@ -2,7 +2,7 @@ import { Component } from 'react';
 import React from 'react';
 import { NavBar, Main, Footer, SpecialEvent } from './components';
 import './App.css';
-import Axios, { AxiosRequestConfig } from 'axios';
+import Axios, { AxiosHeaders, AxiosRequestConfig, RawAxiosRequestHeaders } from 'axios';
 import dayjs from 'dayjs'
 import { CalendarEvents } from './types';
 const DEBUG = false;
@@ -47,14 +47,14 @@ class App extends Component {
   async getData() {
     try {
       const url = 'https://denverbicyclelobby.com/dbl-events.json';
-      const headResponse = await Axios.head(url, { headers: { 'Cache-Control': 'no-store, max-age=0' } as AxiosRequestConfig });
+      const headResponse = await Axios.head(url, { headers: { 'Cache-Control': 'no-store, max-age=0' } as  RawAxiosRequestHeaders});
       const storedData = this.getStorageIfUnchanged(headResponse?.headers['last-modified']);
       if (storedData && !DEBUG) {
         // we already have the data, return it
         return storedData;
       }
 
-      const response = await Axios.get(url, { headers: { 'Cache-Control': 'no-store, max-age=0' } as AxiosRequestConfig });
+      const response = await Axios.get(url, { headers: { 'Cache-Control': 'no-store, max-age=0' } as RawAxiosRequestHeaders });
 
       const data: StorageType = { date: new Date(), data: response.data, lastModified: response.headers['last-modified'] };
       // cache the data 

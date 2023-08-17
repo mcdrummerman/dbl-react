@@ -15,11 +15,11 @@ const OtherActionBox: React.FC = () => {
                 <li>Parks and Rec <a href="https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Parks/Trails/Trail-Detours#section-6" target="_blank" rel="noopener noreferrer">Trail detours</a></li>
                 <li>DOTI is looking to plan for 2050 give your input on Denver Moves Everyone <a href="https://denvermoveseveryone.com/" target="_blank" rel="noopener noreferrer">here</a></li>
             </ul>
-            <h2><i className="fab fa-slack"></i> Slack Channel</h2>
+            {/* <h2><i className="fab fa-slack"></i> Slack Channel</h2>
             <p>Request to join the Slack channel for all the DBL discussions.</p>
             <p><a className="btn btn-primary" target="_blank" rel="noopener noreferrer"
                 href="mailto:info@dbl.bike?subject=Slack%20request&body=I%20would%20like%20to%20join%20the%20Denver%20Bicycle%20Lobby%20Slack%20channel!"
-                role="button">Request</a></p>
+                role="button">Request</a></p> */}
 
         </div>
     );

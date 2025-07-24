@@ -11,6 +11,12 @@ const OtherActionBox: React.FC = () => {
             <h2><i className="fas fa-poll-h"></i> Data & Information</h2>
             <p>{/* title here if needed*/}</p>
             <ul>
+                <li>DBL Candidate Questionnaire
+                    <ul>
+                        <li> <a href="https://drive.google.com/file/d/1m1xJYApTwfzIV5FwiqYce6tnHgAvJnki/view?usp=share_link" target="_blank" rel="noopener noreferrer">Mayor Mike Johnston's answers</a></li>
+                        <li> <a href="https://denverbicyclelobby.com/candidates2023.html" target="_blank" rel="noopener noreferrer">All Answers</a></li>
+                    </ul>
+                </li>
                 <li>Parks and Rec <a href="https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Parks/Trails/Trail-Detours#section-6" target="_blank" rel="noopener noreferrer">Trail detours</a></li>
             </ul>
             {/*
@@ -21,7 +27,7 @@ const OtherActionBox: React.FC = () => {
                 role="button">Request</a></p>
             */}
 
-        </div>
+        </div >
     );
 };
 

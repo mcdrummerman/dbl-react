@@ -5,6 +5,13 @@ const Footer: React.FC = () => {
   return (<footer className="container">
     <div className="row">
       <div className="col-xs-2 mx-2 mb-1">
+        <a target="_blank" rel="noopener noreferrer" title="Email" href="mailto:info@dbl.bike">
+
+          <i className="fas fa-envelope fa-4x" aria-hidden="true"></i>
+
+        </a>
+      </div>
+      <div className="col-xs-2 mx-2 mb-1">
         <a target="_blank" rel="noopener noreferrer" title="Facebook" href="https://www.facebook.com/groups/345613403039899">
 
           <i className="fab fa-facebook-square fa-4x" aria-hidden="true"></i>
@@ -12,10 +19,14 @@ const Footer: React.FC = () => {
         </a>
       </div>
       <div className="col-xs-2 mx-2 mb-1">
-        <a target="_blank" rel="noopener noreferrer" title="twitter" href="https://twitter.com/DenBicycleLobby">
+        <a target="_blank" rel="noopener noreferrer" title="bluesky" href="https://bsky.app/profile/denverbicyclelobby.bsky.social">
+          <i className="fa-brands fa-bluesky fa-4x"></i>
+        </a>
 
-          <i className="fab fa-twitter fa-4x" aria-hidden="true"></i>
-
+      </div>
+           <div className="col-xs-2 mx-2 mb-1">
+        <a target="_blank" rel="noopener noreferrer" title="bluesky" href="https://www.threads.com/@denverbicyclelobby">
+          <i className="fa-brands fa-threads fa-4x"></i>
         </a>
 
       </div>
@@ -35,22 +46,22 @@ const Footer: React.FC = () => {
         </a>
 
       </div>
-      <div className="col-xs-2 mx-2 mb-1">
+      {/* <div className="col-xs-2 mx-2 mb-1">
         <a target="_blank" rel="noopener noreferrer" title="TikTok" href="https://www.tiktok.com/@denverbicyclelobby">
 
           <i className="fab fa-tiktok fa-4x" aria-hidden="true"></i>
 
         </a>
 
-      </div>
-      <div className="col-xs-2 mx-2 mb-1">
+      </div> */}
+      {/* <div className="col-xs-2 mx-2 mb-1">
         <a target="_blank" rel="noopener noreferrer" title="Blog" href="http://blog.dbl.bike">
 
           <i className="fas fa-blog fa-4x" aria-hidden="true"></i>
 
         </a>
 
-      </div>
+      </div> */}
 
     </div>
     <p>&copy; DBL {(new Date().getFullYear())}</p>

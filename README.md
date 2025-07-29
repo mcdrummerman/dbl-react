@@ -1,7 +1,10 @@
 ## AWS Setup
+
+### Initial setup
+
 1. Make sure you have the aws cli installed: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 2. Ensure that you have created an [IAM user in AWS](https://us-east-1.console.aws.amazon.com/iam/home?region=us-west-2#/users). It is best to make a different user with limited persions.
-* See AWS permission example
+* See AWS permission example below
 3. Create an access key and save the Access Key ID and Secret Acces Key somewhere safe like a password manager (not in the repository)
 . Run this command to create a config and credential entry in the `~/.aws` directory
 
@@ -9,6 +12,34 @@
 aws configure --profile dbl-code
 ```
 4. Enter your `Access Key Id`, `Secret Access Code`, `Default region name` (us-west-2), and `Default output format` can be left to default
+
+### IAM S3 Policy example
+
+This will allow the running of the `yarn deploy` command and restrict it to one particular bucket -> `deverbicyclelobby.com`
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:AbortMultipartUpload",
+                "s3:ListBucket",
+                "s3:DeleteObject",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": [
+                "arn:aws:s3:::denverbicyclelobby.com",
+                "arn:aws:s3:::denverbicyclelobby.com/*"
+            ]
+        }
+    ]
+}
+```
 
 ## Available Scripts
 
@@ -37,18 +68,5 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

@@ -1,4 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## AWS Setup
+1. Make sure you have the aws cli installed: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+2. Ensure that you have created an [IAM user in AWS](https://us-east-1.console.aws.amazon.com/iam/home?region=us-west-2#/users). It is best to make a different user with limited persions.
+* See AWS permission example
+3. Create an access key and save the Access Key ID and Secret Acces Key somewhere safe like a password manager (not in the repository)
+. Run this command to create a config and credential entry in the `~/.aws` directory
+
+```bash
+aws configure --profile dbl-code
+```
+4. Enter your `Access Key Id`, `Secret Access Code`, `Default region name` (us-west-2), and `Default output format` can be left to default
 
 ## Available Scripts
 

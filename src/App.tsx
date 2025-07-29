@@ -54,7 +54,7 @@ class App extends Component {
         return storedData;
       }
 
-      const response = await Axios.get(url, { headers: { 'Cache-Control': 'no-store, max-age=0' } });
+      const response = await Axios.get<CalendarEvents>(url, { headers: { 'Cache-Control': 'no-store, max-age=0' } });
 
       const data: StorageType = { date: new Date(), data: response.data, lastModified: response.headers['last-modified'] };
       // cache the data 

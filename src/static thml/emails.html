@@ -93,10 +93,12 @@
       <div class="col-sm-12">
         <div class="jumbotron">
           <p>
-           Please reach out to your City Councilperson to ask them to support Safe Routes to Schools and Broadway Bike Lane funding.
-           </p>
-<p>City Council is voting on amendments tonight to the Mayor's 2026 budget. We are incredibly grateful that Councilwoman At Large Parady is introducing two amendments accomplish this. We think its going to be very close whether or not we have the votes for these, please email your City Council members.
+            Please reach out to your City Councilperson to ask them to support Safe Routes to Schools and Broadway Bike
+            Lane funding.
           </p>
+          <p>City Council is voting on amendments tonight to the Mayor's 2026 budget. We are incredibly grateful that
+            Councilwoman At Large Parady is introducing two amendments accomplish this. We think its going to be very
+            close whether or not we have the votes for these, please email your City Council members.</p>
 
         </div>
       </div>
@@ -104,19 +106,20 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="jumbotron">
-          <p><b>Click the box below that matches your Denver City Council District and <strong>personalize your message!</strong></b> This will prepopulate the emails in your email application.</p>
+          <p><b>Click the box below that matches your Denver City Council District and <strong>personalize your
+                message!</strong></b> This will prepopulate the emails in your email application.</p>
           <p><i><u>If you do not have an email application installed try doing this on your mobile device.</u></i></p>
-          <p><b>The body and subject line will have content but you should use it as inspiration and add your own
-              message so this does not get dismissed as a form email.</b></p>
+          <p><i>The body and subject line will have content but you should use it as inspiration and add your own
+              message so this does not get dismissed as a form email.</i></p>
         </div>
       </div>
     </div>
     <div class="row">
-      
-        <p><i>Don't know your district?</i>&nbsp;Find your Denver City Council District <a
-            href="https://www.denvergov.org/maps/map/councildistricts" target="_blank">here</a>.
-        </p>
-      
+ <div class="col-sm-12">
+      <p><u><i>Don't know your district?</i></u><b> Find your Denver City Council District <a
+          href="https://www.denvergov.org/maps/map/councildistricts" target="_blank">here</a></b>.
+      </p>
+</div>
     </div>
     <div class="row">
       <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(1,this)">
@@ -178,40 +181,40 @@
     let councilEmail = '';
     switch (district) {
       case 0:
-          toEmail = `${toEmail.replace('#','')}`;
+        toEmail = `${toEmail.replace('#', '')}`;
         break;
       case 1:
-        toEmail = `${toEmail.replace('#','districtone@denvergov.org')}`;
+        toEmail = `${toEmail.replace('#', 'districtone@denvergov.org')}`;
         break;
       case 2:
-        toEmail = `${toEmail.replace('#','kevin.flynn@denvergov.org')}`;
+        toEmail = `${toEmail.replace('#', 'kevin.flynn@denvergov.org')}`;
         break;
       case 3:
-        toEmail = `${toEmail.replace('#','jamie.torres@denvergov.org')}`;
+        toEmail = `${toEmail.replace('#', 'jamie.torres@denvergov.org')}`;
         break;
       case 4:
-        toEmail = `${toEmail.replace('#','district4@denvergov.org')}`;
+        toEmail = `${toEmail.replace('#', 'district4@denvergov.org')}`;
         break;
       case 5:
-        toEmail = `${toEmail.replace('#','amanda.sawyer@denvergov.org')}`;
+        toEmail = `${toEmail.replace('#', 'amanda.sawyer@denvergov.org')}`;
         break;
       case 6:
-        toEmail = `${toEmail.replace('#','paul.kashmann@denvergov.org')}`;
+        toEmail = `${toEmail.replace('#', 'paul.kashmann@denvergov.org')}`;
         break;
       case 7:
-        toEmail = `${toEmail.replace('#','district7@denvergov.org')}`;
+        toEmail = `${toEmail.replace('#', 'district7@denvergov.org')}`;
         break;
       case 8:
-        toEmail = `${toEmail.replace('#','district8@denvergov.org')}`;
+        toEmail = `${toEmail.replace('#', 'district8@denvergov.org')}`;
         break;
       case 9:
-        toEmail = `${toEmail.replace('#','district9@denvergov.org')}`;
+        toEmail = `${toEmail.replace('#', 'district9@denvergov.org')}`;
         break;
       case 10:
-        toEmail = `${toEmail.replace('#','district10@denvergov.org')}`;
+        toEmail = `${toEmail.replace('#', 'district10@denvergov.org')}`;
         break;
       case 11:
-        toEmail = `${toEmail.replace('#','stacie.gilmore@denvergov.org')}`;
+        toEmail = `${toEmail.replace('#', 'stacie.gilmore@denvergov.org')}`;
         break;
       default:
         console.log('what ' + district);

@@ -8,9 +8,9 @@ const Main: FunctionComponent<CalendarEvents> = (props) => {
     <Alert  {...{
       type: 'warn',
       text: 'Help us save bike funding for the City of Denver! ',
-      linkText: 'Take action now!',
-      linkUrl: 'example.com',
-      show: false
+      linkText: 'Email council to support mobility budget amendments!',
+      linkUrl: 'https://denverbicyclelobby.com/emails.html',
+      show: true
     }} />
     <JumboTron {...{ styleOverrides: { marginBottom: 0 } }} />
     <About />

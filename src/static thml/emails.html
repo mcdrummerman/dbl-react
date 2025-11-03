@@ -9,7 +9,7 @@
   <meta property="og:url" content="http://dbl.bike/" />
   <neta property="og:type" content="website" />
   <meta property="og:title" content="Denver Bicycle Lobby" />
-  <meta property="og:description" content="Email your elected for open and shared streets!" />
+  <meta property="og:description" content="Email your elected for funding amendments!" />
   <meta property="og:image"
     content="https://s3-us-west-2.amazonaws.com/denverbicyclelobby.com/img/DBL-logo-small.jpg" />
   <title>Denver Bicycle Lobby</title>
@@ -77,7 +77,7 @@
 <body>
   <meta property="og:type" content="website">
   <meta property="og:title" content="Denver Bicycle Lobby">
-  <meta property="og:description" content="Email your elected for open and shared streets!">
+  <meta property="og:description" content="Email your elected for Vision Zero funding support!">
   <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/denverbicyclelobby.com/img/DBL-logo-small.jpg">
   <title>Denver Bicycle Lobby</title>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -92,14 +92,22 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="jumbotron">
-          <p><b>Click the box below that matches your Denver City Council District and <strong>personalize your message!</strong></b> This will prepopulate the emails
-            for
-            the Mayor, City Council, Director of the Department of Transportation, Parks Board members, as well as your
-            specific city councilor and parks board member in your email client.</p>
-          <p><i><u>If you do not have an email client installed try doing this on your mobile device.</u></i></p>
+          <p>
+           Please reach out to your City Councilperson to ask them to support Safe Routes to Schools and Broadway Bike Lane funding.
+           </p>
+<p>City Council is voting on amendments tonight to the Mayor's 2026 budget. We are incredibly grateful that Councilwoman At Large Parady is introducing two amendments accomplish this. We think its going to be very close whether or not we have the votes for these, please email your City Council members.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="jumbotron">
+          <p><b>Click the box below that matches your Denver City Council District and <strong>personalize your message!</strong></b> This will prepopulate the emails in your email application.</p>
+          <p><i><u>If you do not have an email application installed try doing this on your mobile device.</u></i></p>
           <p><b>The body and subject line will have content but you should use it as inspiration and add your own
-              message
-              so this does not get dismissed as a form email.</b></p>
+              message so this does not get dismissed as a form email.</b></p>
         </div>
       </div>
     </div>
@@ -121,7 +129,7 @@
       <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(3,this)">
         <div class="">3 - Jamie Torres</div>
       </a> <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(4,this)">
-        <div class="">4 - Kendra Black</div>
+        <div class="">4 - Diana Romero Campbell</div>
       </a>
     </div>
     <div class="row">
@@ -133,14 +141,14 @@
     </div>
     <div class="row">
       <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(7,this)">
-        <div class="">7 - Jolon Clark</div>
+        <div class="">7 - Flor Alvidrez</div>
       </a> <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(8,this)">
-        <div class="">8 - Christopher Herndon</div>
+        <div class="">8 - Shontel M. Lewis</div>
       </a>
     </div>
     <div class="row">
       <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(9,this)">
-        <div class="">9 - Candi CdeBaca</div>
+        <div class="">9 - Darrell Watson</div>
       </a> <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(10,this)">
         <div class="">10 - Chris Hinds</div>
       </a>
@@ -149,61 +157,61 @@
       <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(11,this)">
         <div class="">11 - Stacie Gilmore</div>
       </a>
-      <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(0,this)">
+      <!-- <a class="col-sm-6 click-box alert alert-primary" onclick="handleMail(0,this)">
         <div class="">Not sure but let me continue anyway</div>
-      </a>
+      </a> -->
     </div>
 
   </div>
 
   <footer class="container">
     <div class="row"></div>
-    <p>© DBL 2020</p>
+    <p>© DBL 2025</p>
   </footer>
 </body>
 <script>
   function handleMail(district, b, c) {
-    const baseSubject = `Keep%20our%20Shared%20Streets%20and%20Car%20Free%20Parks`;
-    let subject = district > 0 ? `${baseSubject} in District ${district}` : baseSubject;
-    let body = 'The%20Open%20and%20Shared%20Streets%20are%20an%20incredibly%20positive%20change%20on%20Denver%27s%20streets.%20I%20am%20writing%20to%20express%20my%20strong%20support%20for%20the%20continued%20absence%20of%20cars%20from%20Denver%27s%20parks%20as%20well%20as%20improving%20and%20making%20the%20Shared%20Streets%20permanent.%0A%0AParks%20should%20be%20accessible%20to%20all%20but%20this%20does%20not%20necessitate%20car%20travel%20within%20them%2C%20please%20keep%20the%20parks%20car-free.%20The%20Shared%20Streets%20have%20been%20excellent%2C%20now%20it%20is%20time%20to%20make%20them%20permanent%20and%20think%20about%20how%20they%20can%20be%20improved.%0A%0AIf%20this%20pandemic%20has%20shown%20us%20anything%20it%20is%20that%20we%20can%20act%20quickly%20and%20no%20longer%20must%20accept%20the%20status%20quo.%20Please%20continue%20to%20make%20our%20streets%20friendlier%20for%20all%20modes%20of%20travel%20by%20making%20the%20Shared%20and%20Open%20Streets%20permanent.';
-    let toEmail = `mailto:Michael.Hancock@denvergov.org,alan.salazar@denvergov.org,dencc@denvergov.org,parksandrecreation@denvergov.org?bcc=happy.haynes@denvergov.org,ERRC@denvergov.org,kniechatlarge@denvergov.org,ortegaatlarge@denvergov.org,info@dbl.bike,Eulois.Cleckley@denvergov.org,john.paterson@denvergov.org,SamVPRAB@gmail.com,Tashmesia.Mitchell@gmail.com,marlarod2400@gmail.com,frnavarro@comcast.net,Trena_Jones@dpsk12.org`
+    const baseSubject = `Please%20Support%20Safe%20Routes%20to%20Schools%20and%20Broadway%20Bike%20Lane%20funding`;
+    let subject = `${baseSubject}`;
+    let body = 'I%20am%20seeking%20your%20support%20for%20the%20budget%20amendments%20to%20restore%20funding%20for%20Safe%20Routes%20to%20Schools%20and%20design%20and%20planning%20for%20the%20Broadway%20Bike%20Lane.%20%0A%0ACurrently%20so%20far%20as%20we%20can%20tell%2C%20the%20city%20has%20no%20plans%20to%20build%20any%20protected%20bike%20lane%20in%20Denver%20in%20the%202026%20budget.%20These%20amendments%20propose%20we%20dedicate%20funding%20for%20the%20initial%20work%20on%20designing%20the%20Broadway%20Bike%20Lane%20north%20of%20Speer%20Boulevard%2C%20so%20that%20the%20current%20protected%20bike%20lane%20can%20be%20connected%20to%20downtown%20and%20Cap%20Hill.%0A%0ABoth%20of%20these%20amendments%20are%20important%20to%20people%20who%20both%20walk%20and%20roll%20in%20Denver%20and%20I%20encourage%20you%20to%20vote%20yes.';
+    let toEmail = `mailto:#?bcc=info@dbl.bike&cc=G-Gutierrez.atlarge@denvergov.org,ParadyAtLarge@denvergov.org`
     let councilEmail = '';
     switch (district) {
       case 0:
-
+          toEmail = `${toEmail.replace('#','')}`;
         break;
       case 1:
-        toEmail = `${toEmail},districtone@denvergov.org,ndcopeland@aol.com`;
+        toEmail = `${toEmail.replace('#','districtone@denvergov.org')}`;
         break;
       case 2:
-        toEmail = `${toEmail},kevin.flynn@denvergov.org,fran@francolemancc2.com`;
+        toEmail = `${toEmail.replace('#','kevin.flynn@denvergov.org')}`;
         break;
       case 3:
-        toEmail = `${toEmail},jamie.torres@denvergov.org,DenverParksLee@gmail.com`;
+        toEmail = `${toEmail.replace('#','jamie.torres@denvergov.org')}`;
         break;
       case 4:
-        toEmail = `${toEmail},kendra.black@denvergov.org,fxrowe@gmail.com`;
+        toEmail = `${toEmail.replace('#','district4@denvergov.org')}`;
         break;
       case 5:
-        toEmail = `${toEmail},amanda.sawyer@denvergov.org,meredithprab@gmail.com`;
+        toEmail = `${toEmail.replace('#','amanda.sawyer@denvergov.org')}`;
         break;
       case 6:
-        toEmail = `${toEmail},paul.kashmann@denvergov.org,lynnegarramone@gmail.com`;
+        toEmail = `${toEmail.replace('#','paul.kashmann@denvergov.org')}`;
         break;
       case 7:
-        toEmail = `${toEmail},jolon.clark@denvergov.org,Amyrazz37@gmail.com`;
+        toEmail = `${toEmail.replace('#','district7@denvergov.org')}`;
         break;
       case 8:
-        toEmail = `${toEmail},christopher.herndon@denvergov.org,lholben@hotmail.com`;
+        toEmail = `${toEmail.replace('#','district8@denvergov.org')}`;
         break;
       case 9:
-        toEmail = `${toEmail},district9@denvergov.org,Lisa.Calderon@denvergov.org`;
+        toEmail = `${toEmail.replace('#','district9@denvergov.org')}`;
         break;
       case 10:
-        toEmail = `${toEmail},chris.hinds@denvergov.org,mmckinleyprab@gmail.com`;
+        toEmail = `${toEmail.replace('#','district10@denvergov.org')}`;
         break;
       case 11:
-        toEmail = `${toEmail},stacie.gilmore@denvergov.org,pamjiner@yahoo.com`;
+        toEmail = `${toEmail.replace('#','stacie.gilmore@denvergov.org')}`;
         break;
       default:
         console.log('what ' + district);

@@ -10,7 +10,7 @@ const Main: FunctionComponent<CalendarEvents> = (props) => {
       text: 'Help us save bike funding for the City of Denver! ',
       linkText: 'Email council to support mobility budget amendments!',
       linkUrl: 'https://denverbicyclelobby.com/emails.html',
-      show: true
+      show: false
     }} />
     <JumboTron {...{ styleOverrides: { marginBottom: 0 } }} />
     <About />

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import React from 'react';
-import { NavBar, Main, Footer, SpecialEvent } from './components';
+import { NavBar, Main, Footer, SpecialEvent, JohnstonFailures } from './components';
 import './App.css';
 import Axios, { AxiosRequestConfig } from 'axios';
 import dayjs from 'dayjs'
@@ -9,12 +9,27 @@ const DEBUG = false;
 
 type StorageType = { date: Date, data: CalendarEvents, lastModified: string };
 
-class App extends Component {
+interface AppState {
+  activeTab: string;
+}
+
+class App extends Component<{}, AppState> {
   private storageKey = 'cal-data';
+
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      activeTab: 'home'
+    };
+  }
 
   async componentDidMount() {
     await this.getData();
     this.forceUpdate();
+  }
+
+  handleTabChange = (tab: string) => {
+    this.setState({ activeTab: tab });
   }
 
   private setStorage(data: StorageType | null) {
@@ -64,12 +79,23 @@ class App extends Component {
     }
   }
 
-  render() {
+  renderTabContent() {
     const props = {
       upcomingEvents: this.getStorage()?.data?.upcomingEvents ?? [],
       dblMeetups: this.getStorage()?.data?.dblMeetups ?? []
     } as CalendarEvents;
 
+    switch (this.state.activeTab) {
+      case 'home':
+        return <Main {...props} />;
+      case 'johnston-failures':
+        return <JohnstonFailures />;
+      default:
+        return <Main {...props} />;
+    }
+  }
+
+  render() {
     const startString = 'Sun May 23 2021 14:00:00 GMT-0600 (Mountain Daylight Time)';
     const endString = 'Sun May 23 2021 16:20:00 GMT-0600 (Mountain Daylight Time)';
 
@@ -80,14 +106,14 @@ class App extends Component {
     // show the special event compopnent if the our custom logic is true
     if (now.isAfter(start) && now.isBefore(end)) {
       return <SpecialEvent />
-    } 
+    }
     // show the standard stuff
     else {
       return (
 
         <div>
-          <NavBar />
-          <Main {...props} />
+          <NavBar activeTab={this.state.activeTab} onTabChange={this.handleTabChange} />
+          {this.renderTabContent()}
           <Footer />
         </div>
 

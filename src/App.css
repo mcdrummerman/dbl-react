@@ -34,3 +34,18 @@
 .dbl-logo{
   border-radius: 6px;
 }
+
+.johnston-failures-page {
+  min-height: calc(100vh - 200px);
+}
+
+.johnston-failures-container {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.johnston-failures-title {
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}

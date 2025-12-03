@@ -13,7 +13,8 @@ import PublicMeetings from './PublicMeetings';
 import InfoBlock from './InfoBlock';
 import Alert from './Alert';
 import CodeOfConduct from './CodeOfConduct';
-import SpecialEvent from './SpecialEvent'
+import SpecialEvent from './SpecialEvent';
+import JohnstonFailures from './JohnstonFailures';
 
 export {
     Alert,
@@ -31,5 +32,6 @@ export {
     CommunityEvents,
     PublicMeetings,
     InfoBlock,
-    SpecialEvent
+    SpecialEvent,
+    JohnstonFailures
 }

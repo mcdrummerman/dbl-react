@@ -62,3 +62,18 @@
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   transform: scale(1.05);
 }
+
+.ics-download-link {
+
+  color: #007bff;
+  text-decoration: none;
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+
+
+.ics-download-link i {
+  margin-right: 4px;
+}

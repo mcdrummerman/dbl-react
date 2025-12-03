@@ -10,7 +10,10 @@ const CommunityEvents: FunctionComponent<CalendarEvents> = ({ upcomingEvents }) 
             <h6>View in: <a target="blank"
                 href="https://calendar.google.com/calendar/embed?src=nosquish.com_qnc0aue18807gi2j7gn7m5hdhg%40group.calendar.google.com&amp;ctz=America%2FDenver">Google
               Calendar</a> | <a
-                    href="https://calendar.google.com/calendar/ical/nosquish.com_qnc0aue18807gi2j7gn7m5hdhg%40group.calendar.google.com/public/basic.ics">.ics</a>
+                    href="https://calendar.google.com/calendar/ical/nosquish.com_qnc0aue18807gi2j7gn7m5hdhg%40group.calendar.google.com/public/basic.ics"
+                    download="dbl-calendar.ics"
+                    className="ics-download-link">
+                    <i className="fas fa-download"></i> Download Calendar (.ics)</a>
             </h6>
             <table className="table table-hover">
                 <thead>

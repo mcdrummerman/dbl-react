@@ -1,7 +1,9 @@
 import React from 'react';
 
 interface FailureItem {
+    order?: number,
     title: string;
+    date?: string,
     description: string;
     imageUrl?: string;
     links?: { text: string; url: string }[];
@@ -11,8 +13,9 @@ interface FailureItem {
 const JohnstonFailures: React.FC = () => {
     const failures: FailureItem[] = [
         {
-            title: "Example Failure",
-            description: "Description of what happened and why it was a failure.",
+            title: "West 29th Ave",
+            date: 'date',
+            description: "Director Ford decided to take a private meeting with residents along 29th. After the project had reached finale design she decided to alter it citing \"community feedback\". ",
             imageUrl: "https://media.istockphoto.com/id/1316134499/photo/a-concept-image-of-a-magnifying-glass-on-blue-background-with-a-word-example-zoom-inside-the.webp?s=2048x2048&w=is&k=20&c=qhjE8YB8_eArO8-WJyDV_-QjFHZXwt_8Vsxn8dCMgOs=",
             links: [
                 { text: "News Article", url: "#" },
@@ -24,15 +27,42 @@ const JohnstonFailures: React.FC = () => {
                 "Step 3: A better approach to the problem",
                 "Step 4: Long-term solution that addresses root cause"
             ]
+        },
+        {
+
+            title: "Example Failure 2",
+            date: '',
+            description: "Description of what happened and why it was a failure.",
+            imageUrl: "https://media.istockphoto.com/id/1316134499/photo/a-concept-image-of-a-magnifying-glass-on-blue-background-with-a-word-example-zoom-inside-the.webp?s=2048x2048&w=is&k=20&c=qhjE8YB8_eArO8-WJyDV_-QjFHZXwt_8Vsxn8dCMgOs=",
+            links: [
+                { text: "News Article", url: "#" },
+                { text: "Official Statement", url: "#" }
+            ],
+            alternatives: [
+                "asdf",
+                "Step 2: Another alternative action",
+                "Step 3: A better approach to the problem",
+                "Step 4: Long-term solution that addresses root cause"
+            ]
         }
+
+
     ];
+
+    failures.sort((a: FailureItem, b: FailureItem) => {
+        if (a.order && b.order) {
+            return a.order - b.order
+        }
+        else { return 0; }
+    })
+
 
     return (
         <main role="main" className="johnston-failures-page">
             <div className="container johnston-failures-container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h1 className="johnston-failures-title">Mayor Johnston Failures</h1>
+                        <h2 className="johnston-failures-title">Mayor Johnston and Executive Director Amy Ford Failure Tracker</h2>
                     </div>
                 </div>
 
@@ -40,6 +70,9 @@ const JohnstonFailures: React.FC = () => {
                     <div key={index} className="failure-item row mb-5">
                         <div className="col-md-6 failure-content">
                             <h3 className="failure-item-title">{failure.title}</h3>
+
+                            {failure.date && <h6 className="failure-item-date">{failure.date}</h6>}
+                            
                             <p className="failure-description">{failure.description}</p>
 
                             {failure.imageUrl && (
